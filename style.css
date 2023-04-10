@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&family=Poppins&family=Slabo+27px&display=swap');
+
+*{
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    max-width: 1960px !important;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cursor{
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    transform:translate(-50%,-50%);
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #000;
+}
+.left::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #304357;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.left:hover::after{
+    width: 100%;
+}
+
+.nav-item{
+    position: relative;
+}
+
+.carousel{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-link{
+    font-weight: 700;
+}
+
+
+.first_counter{
+    background-color: #3a526a;
+    color: #fff;
+}
+
+.counter-items{
+    height: 150px;
+}
+.counter-numbers{
+    
+    font-size: 54px;
+}
+.counter_text{
+    font-size: 28px;
+}
+.border-item{
+    width: 2px;
+    height: 70px;
+    background-color: #fff;
+    
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+
+.services_item{
+    width: 95%;
+}
+
+
+.online_text{
+    color: #fff;
+}
+.submit{
+    width: 200px;
+    font-size: 20px;
+}
+.migrationh1{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.maincontainer
+{
+    width: 302px;
+    height: 299px;
+    margin: 10px;
+    float: left; /* stack each div horizontally */
+}
+
+.maincontainer img
+{
+   border-radius: 10px;
+}
+
+.back h2
+{
+    position: absolute;
+}
+
+.back p
+{
+    position: absolute;
+    top: 50px;
+    font-size: 15px;
+}
+
+.front h2
+{
+    position: absolute;
+    padding: 10px;
+    top: 200px;
+    color: #000;
+}
+
+/* style the maincontainer class with all child div's of class .front */
+.maincontainer > .front
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    
+    width: 302px;
+    height: 290px;
+    
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.maincontainer > .back
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background: #262626;
+    color: #fff;
+    width: 302px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+.maincontainer:hover > .front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover > .back
+{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+@media screen and (min-width:1960px){
+    .totop{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width:767px){
+    .counter-numbers{
+        font-size: 32px;
+    }
+    .card{
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        width: 90% !important;
+    }
+    .first_counter{
+        height: 285px;
+        padding-top: 1.5rem;
+    }
+    .counter_text{
+        font-size: 24px;
+        padding-bottom: 1rem;
+    }
+    .mobile_for {
+        margin-left: 1.4rem;
+    }
+    .carousel-item img{
+        height: 300px;
+    }
+    .migration{
+        margin: 10px;
+    }
+    .left:hover::after{
+        width: 27%;
+    }
+    .maincontainer .front{
+        width: 95% !important;
+        
+    }
+
+    .maincontainer .back{
+        width: 95% !important;
+    }
+    .migrationh1{
+        font-weight: bold;
+    }
+    .services{
+        margin-top: 25px;
+    }
+    .totop{
+        width: 30px;
+        height: 30px;
+    }
+    .vedioone{
+       width: 100%;
+    }
+    .services_second{
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+   
+    .news_tab{
+        margin-top: 25px;
+    }
+    .services_second{
+        width: 33%;
+    }
+    .counter{
+        font-size: 24px;
+    }
+    .counter_text{
+        font-size: 24px;
+    }
+    .news_card{
+        width: 100% !important;
+    }
+    .borderitem  {
+        width: 2px;
+        height: 70px;
+        background-color: #fff;
+    }
+    .totop{
+        right:10px;
+    }
+}
+
+
+
+
+.totop{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    font-size: 32px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .6s;
+    
+}
+
+.active{
+    bottom: 64px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+.footer{
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+.footer h5{
+    font-size: 18px;
+}
+
+
+
+
+
+.vedioone{
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.vedio_btn{
+    cursor: pointer;
+}
